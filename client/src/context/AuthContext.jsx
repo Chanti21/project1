@@ -14,11 +14,14 @@ export const AuthProvider = ({ children }) => {
     setLoading(true);
     try {
       const data = await loginService(email, password);
+      // Save both user data and token if your service provides them
       localStorage.setItem('user', JSON.stringify(data));
       setUser(data);
+      setLoading(false); // Set to false ONLY after user state is updated
       return data;
-    } finally {
+    } catch (error) {
       setLoading(false);
+      throw error;
     }
   };
 
@@ -28,9 +31,11 @@ export const AuthProvider = ({ children }) => {
       const data = await signupService(name, email, password, role);
       localStorage.setItem('user', JSON.stringify(data));
       setUser(data);
+      setLoading(false); // Set to false ONLY after user state is updated
       return data;
-    } finally {
+    } catch (error) {
       setLoading(false);
+      throw error;
     }
   };
 
