@@ -197,8 +197,8 @@ Watch the full application walkthrough here:
 
 ## 🔗 Live URL
 *(Add your deployed Railway URL here)*
-- **Live Application:** `https://your-app-url.up.railway.app`
+- **Live Application:** `https://project1-j2pu.onrender.com`
 
 ## 🐙 GitHub Repo
 *(Add your GitHub Repo URL here)*
-- **Repository:** `https://github.com/yourusername/team-task-manager`
+- **Repository:** `https://github.com/Chanti21/project1`
